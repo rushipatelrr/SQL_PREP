@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Lifted directly from the original sql-prep.html :root block — see tailwind.config.ts
+   for how these map onto Tailwind color utilities (bg-panel, text-text-dim, etc). */
+:root {
+  --ink: #0a0a0a;
+  --panel: #151517;
+  --panel-2: #1c1c1f;
+  --line: #2a2a2e;
+  --text: #e7e9ee;
+  --text-dim: #93979f;
+  --amber: #e0a24b;
+  --cyan: #4fc3d9;
+  --green: #5fb87a;
+  --red: #e0684f;
+  --purple: #9d8cf0;
+}
+
+html[data-theme='light'] {
+  --ink: #f6f7f9;
+  --panel: #ffffff;
+  --panel-2: #f0f2f5;
+  --line: #e1e4ea;
+  --text: #1a2027;
+  --text-dim: #6b7280;
+  --amber: #b9720f;
+  --cyan: #0f7f95;
+  --green: #2f8f57;
+  --red: #c0503a;
+  --purple: #6d59d1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+code {
+  background: var(--panel-2);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: 'IBM Plex Mono', Menlo, monospace;
+  font-size: 0.85em;
+  color: var(--amber);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 6px;
+}
